@@ -1,5 +1,6 @@
 import { getConfig, IS_MOCK } from '@/config';
 import { apiCall } from './api';
+import { mockUserName } from './mockData';
 
 export interface SessionUser {
   id: string | null;
@@ -14,7 +15,7 @@ export function getSessionUser(): Promise<SessionUser> {
   if (IS_MOCK) {
     return Promise.resolve({
       id: 'demo-user',
-      name: import.meta.env.VITE_DEV_USER_NAME || 'Usuario Demo',
+      name: import.meta.env.VITE_DEV_USER_NAME || mockUserName(getConfig().language),
     });
   }
 

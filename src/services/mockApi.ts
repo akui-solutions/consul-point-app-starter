@@ -1,3 +1,4 @@
+import { getConfig } from '@/config';
 import { buildMockAppointments, mockContacts } from './mockData';
 import type { BaseDoc, ListResponse, ModelApi } from './modelApi';
 
@@ -8,7 +9,7 @@ const stores = new Map<string, AnyDoc[]>();
 function getStore(modelName: string): AnyDoc[] {
   let store = stores.get(modelName);
   if (!store) {
-    store = modelName === 'appointment' ? (buildMockAppointments() as AnyDoc[]) : [];
+    store = modelName === 'appointment' ? (buildMockAppointments(getConfig().language) as AnyDoc[]) : [];
     stores.set(modelName, store);
   }
   return store;
