@@ -1,0 +1,6 @@
+dist
+node_modules
+yarn.lock
+*.zip
+# Kept byte for byte: it is the same file in every app built on this base.
+src/services/sessionRefresh.ts

@@ -1,0 +1,48 @@
+{
+  "name": "consul-point-app-starter",
+  "description": "Starter template for ConsulPoint embedded apps: a sample appointment scheduler, ready to clone and adapt.",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "miniAppContract": 2,
+  "scripts": {
+    "dev": "vite",
+    "dev:mock": "VITE_DEV_MOCK=true VITE_DEV_CHAT_ID=demo-chat vite",
+    "build": "tsc -b && VITE_DEV_MOCK=false vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "package": "tsc -b && VITE_DEV_MOCK=false vite build && rm -f consul-point-app-starter.zip && cd dist && zip -r -X ../consul-point-app-starter.zip . -x '.*' '*/.*' '__MACOSX/*' '*.zip'"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9",
+    "@testing-library/dom": "^10",
+    "@testing-library/react": "^16",
+    "@testing-library/user-event": "^14",
+    "@types/node": "^22.9.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9",
+    "eslint-plugin-jsx-a11y": "^6",
+    "eslint-plugin-react-hooks": "^5",
+    "globals": "^15",
+    "jsdom": "^25",
+    "postcss": "^8.4.49",
+    "prettier": "^3",
+    "tailwindcss": "^3.4.15",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.9"
+  },
+  "license": "MIT"
+}

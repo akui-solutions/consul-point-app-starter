@@ -1,0 +1,77 @@
+/* The app lives inside the platform, so it borrows the platform's voice: the
+   same typeface, the same cool neutrals and the same corner radius. One accent
+   of its own is enough to tell it apart. */
+:root {
+  --font-display: 'Poppins', system-ui, sans-serif;
+  --font-body: 'Poppins', system-ui, sans-serif;
+
+  --shadow-sm: 0 1px 2px 0 rgb(16 24 32 / 0.06);
+  --shadow-md: 0 6px 16px -4px rgb(16 24 32 / 0.14), 0 2px 4px -2px rgb(16 24 32 / 0.06);
+  --shadow-lg: 0 24px 48px -12px rgb(16 24 32 / 0.28);
+}
+
+body[data-theme='light'] {
+  color-scheme: light;
+  --color-bg: #fafafa;
+  --color-bg-paper: #f1f4f7;
+  --color-bg-surface: #e6ebf0;
+
+  --color-primary: #0f766e;
+  --color-primary-light: #2dbeb2;
+  --color-primary-dark: #0a4f4a;
+  --color-primary-contrast: #ffffff;
+  --color-primary-hover: #0b5d57;
+  --color-primary-surface: #e2f1ef;
+  --color-primary-muted: #c8e6e2;
+
+  --color-text-primary: #262f38;
+  --color-text-secondary: #4e5a63;
+  --color-text-disabled: #8e99a3;
+  --color-text-inverse: #ffffff;
+
+  --color-border: #e1e6eb;
+  --color-border-strong: #c7d0d8;
+
+  --color-error: #b42318;
+  --color-error-surface: #fdecea;
+  --color-warning: #9a5b0a;
+  --color-warning-surface: #fdf1dc;
+  --color-success: #17753d;
+  --color-success-surface: #e6f4ea;
+
+  --scrollbar-thumb: #c7d0d8;
+  --scrollbar-thumb-hover: #a3aeb8;
+}
+
+body[data-theme='dark'] {
+  color-scheme: dark;
+  --color-bg: #1a222a;
+  --color-bg-paper: #222c36;
+  --color-bg-surface: #2c3a4a;
+
+  --color-primary: #4fd1c5;
+  --color-primary-light: #8be4db;
+  --color-primary-dark: #2aa89c;
+  --color-primary-contrast: #0b2622;
+  --color-primary-hover: #74dcd2;
+  --color-primary-surface: #17383a;
+  --color-primary-muted: #1f4a4a;
+
+  --color-text-primary: #e0e6ec;
+  --color-text-secondary: #b3c0cc;
+  --color-text-disabled: #6f7d8a;
+  --color-text-inverse: #1a222a;
+
+  --color-border: #2f3b47;
+  --color-border-strong: #455364;
+
+  --color-error: #f97066;
+  --color-error-surface: #3b1a1a;
+  --color-warning: #f5b544;
+  --color-warning-surface: #3a2c14;
+  --color-success: #5fd39a;
+  --color-success-surface: #163326;
+
+  --scrollbar-thumb: #455364;
+  --scrollbar-thumb-hover: #5b6b7d;
+}
