@@ -10,7 +10,7 @@ it, and prepares the confirmation message for the conversation.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/images/agenda-dark.png" />
-  <img src="docs/images/agenda-light.png" alt="The appointment agenda: upcoming appointments grouped by day, each with its time, contact, reason and status" width="880" />
+  <img src="docs/images/agenda-light.png" alt="The appointment agenda: upcoming appointments grouped by day, each with its time, contact, reason and status" width="640" />
 </picture>
 
 It is useful for two things:
@@ -23,7 +23,7 @@ It is useful for two things:
 
 | Booking, with contact suggestions                                                                                               | Actions with a name                                                                                                                                               | In a conversation's side panel                                                                                           |
 | ------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| <img src="docs/images/form.png" alt="The new appointment form suggesting two contacts that match what was typed" width="300" /> | <img src="docs/images/menu.png" alt="The actions menu of an appointment: insert confirmation, view contact, add to calendar, edit, cancel, delete" width="300" /> | <img src="docs/images/panel.png" alt="The agenda in dark theme at the width of a conversation side panel" width="200" /> |
+| <img src="docs/images/form.png" alt="The new appointment form suggesting two contacts that match what was typed" width="260" /> | <img src="docs/images/menu.png" alt="The actions menu of an appointment: insert confirmation, view contact, add to calendar, edit, cancel, delete" width="260" /> | <img src="docs/images/panel.png" alt="The agenda in dark theme at the width of a conversation side panel" width="170" /> |
 
 Every screenshot comes from demo mode: the people and appointments in them are invented.
 
