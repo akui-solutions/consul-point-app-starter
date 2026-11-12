@@ -1,14 +1,48 @@
 # ConsulPoint embedded app starter
 
+[![CI](https://github.com/akui-solutions/consul-point-app-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/akui-solutions/consul-point-app-starter/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Use this template](https://img.shields.io/badge/use%20this-template-0f766e.svg)](https://github.com/akui-solutions/consul-point-app-starter/generate)
+
 A small, complete sample of an embedded app for ConsulPoint, meant as a starting point.
 It is an **appointment scheduler**: it books an appointment for a contact, confirms or cancels
 it, and prepares the confirmation message for the conversation.
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/agenda-dark.png" />
+  <img src="docs/images/agenda-light.png" alt="The appointment agenda: upcoming appointments grouped by day, each with its time, contact, reason and status" width="880" />
+</picture>
+
 It is useful for two things:
 
 - **Seeing how an app integrates** with ConsulPoint, in real, commented code.
-- **Starting your own**: clone the repository, replace the sample feature with the one you
-  need and keep the base.
+- **Starting your own**: press **Use this template**, replace the sample feature with the one
+  you need and keep the base.
+
+## A quick look
+
+| Booking, with contact suggestions                                                                                               | Actions with a name                                                                                                                                               | In a conversation's side panel                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| <img src="docs/images/form.png" alt="The new appointment form suggesting two contacts that match what was typed" width="300" /> | <img src="docs/images/menu.png" alt="The actions menu of an appointment: insert confirmation, view contact, add to calendar, edit, cancel, delete" width="300" /> | <img src="docs/images/panel.png" alt="The agenda in dark theme at the width of a conversation side panel" width="200" /> |
+
+Every screenshot comes from demo mode: the people and appointments in them are invented.
+
+## How it fits together
+
+```mermaid
+sequenceDiagram
+    participant P as ConsulPoint
+    participant A as App (this repo)
+    participant S as ConsulPoint API
+    P->>A: Context: language, theme, session
+    A->>S: Requests carrying the session
+    S-->>A: Its own records, contacts
+    A->>P: Messages: insert text, open a page, open a link
+    Note over P,A: When the session expires, the app asks for a new one and retries
+```
+
+The app is a static site shown inside ConsulPoint. It never sees the user's own session: it
+gets a short-lived one of its own, and everything it stores or reads goes through the API.
 
 ## See it in a minute
 
