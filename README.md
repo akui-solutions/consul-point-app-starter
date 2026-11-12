@@ -77,8 +77,9 @@ src/
    the app works the same, and the person's name is typed by hand.
 5. Open the app from the applications menu or from the side panel of a conversation.
 
-Each step is covered in detail in the **Aplicaciones integradas** section of the
-[ConsulPoint documentation](https://docs.consulpoint.com) (in Spanish).
+Each step is covered in detail in the
+[Aplicaciones integradas](https://docs.consulpoint.com/aplicaciones-integradas) section of the
+ConsulPoint documentation (in Spanish).
 
 ## Making it your own
 
